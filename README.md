@@ -1,4 +1,6 @@
 Role-BasedAccessControl
+
+
 Overview
 This project is a web application that allows user authentication (login/registration), a user dashboard that displays user statistics, and a management interface to perform CRUD operations (Create, Read, Update, Delete) on users. The application is designed to manage users effectively with roles for active and inactive users, settings management, and a secure logout feature.
 
@@ -34,7 +36,7 @@ MongoDB (or another database, depending on your project)
 Clone the Repository
 bash
 Copy code
-git clone https://github.com/yourusername/project-name.git
+git clone https://github.com/hariharan138/Role-BasedAccessControl.git
 Install Dependencies
 Navigate to the project directory and install the necessary dependencies for both frontend and backend.
 
