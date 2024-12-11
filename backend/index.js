@@ -8,22 +8,27 @@ const userRoutes = require('./Routes/UserRoutes');
 
 const app = express();
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Use the User routes
+
 app.use('/api/users', userRoutes);
 
-// MongoDB Atlas Connection URI from environment variable
+app.use("/",(req,res)=>{
+  res.json({message:"connected express app"})
+})
+
+app.get('/', (req, res) => {
+  res.send('mongodb connected');
+});
+
+
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // Connect to MongoDB Atlas
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(MONGODB_URI)
   .then(() => {
     console.log('MongoDB Connected Successfully');
   })
